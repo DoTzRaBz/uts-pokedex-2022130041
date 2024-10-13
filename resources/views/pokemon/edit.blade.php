@@ -56,7 +56,10 @@
         </div>
         <div class="mb-3">
             <label for="is_legendary" class="form-label">Is Legendary</label>
-            <input type="checkbox" name="is_legendary" class="form-check-input" value="1" {{ old('is_legendary', $pokemon->is_legendary) ? 'checked' : '' }}>
+            <select name="is_legendary" class="form-select" required>
+                <option value="0">No</option>
+                <option value="1" {{ $pokemon->is_legendary ? 'selected' : '' }}>Yes</option>
+            </select>
         </div>
         <div class="mb-3">
             <label for="photo" class="form-label">Photo</label>

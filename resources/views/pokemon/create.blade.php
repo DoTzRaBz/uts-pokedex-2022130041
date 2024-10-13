@@ -43,7 +43,7 @@
         </div>
         <div class="mb-3">
             <label for="hp" class="form-label">HP</label>
-            <input type="number" name="hp" class=" form-control" value="{{ old('hp', 0) }}" required>
+            <input type="number" name="hp" class="form-control" value="{{ old('hp', 0) }}" required>
         </div>
         <div class="mb-3">
             <label for="attack" class="form-label">Attack</label>
@@ -55,7 +55,10 @@
         </div>
         <div class="mb-3">
             <label for="is_legendary" class="form-label">Is Legendary</label>
-            <input type="checkbox" name="is_legendary" class="form-check-input" value="1" {{ old('is_legendary') ? 'checked' : '' }}>
+            <select name="is_legendary" class="form-select" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
         </div>
         <div class="mb-3">
             <label for="photo" class="form-label">Photo</label>
